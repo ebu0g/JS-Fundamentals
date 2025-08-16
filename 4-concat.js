@@ -1,14 +1,6 @@
-function argument(arg1, arg2){
-    if (arg1 && arg2) {
-        return arg1 + " " + arg2;
-    } else if (arg1) {
-        return "HBTN";
-    } else {
-        return "";
-    }
+const arg = process.argv[2];
+if (arg === undefined) {
+  console.log("No argument");
+} else {
+  console.log(arg);
 }
-
-result = argument("python" + " fun");
-console.log(result);
-console.log(argument("Python")); 
-console.log(argument()); 
