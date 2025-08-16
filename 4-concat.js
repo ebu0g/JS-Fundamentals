@@ -1,14 +1,10 @@
-function myFunction(arg1, arg2) {
-  if (arg1 !== undefined && arg2 !== undefined) {
-    console.log(arg1 + " " + arg2);
-  } else if (arg1 !== undefined && arg2 === undefined) {
-    console.log(arg1 + " is undefined");
-  } else {
-    console.log("undefined is undefined");
-  }
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+
+if (arg1 && arg2) {
+  console.log(`${arg1} is ${arg2}`);
+} else if (arg1) {
+  console.log(`${arg1} is undefined`);
+} else {
+  console.log('undefined is undefined');
 }
-
-
-myFunction("Python", "fun");   // Python fun
-myFunction("HBTN");            // HBTN is undefined
-myFunction();                  // undefined is undefined
