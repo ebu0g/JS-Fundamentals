@@ -1,3 +1,7 @@
 let arr = ["C is fun", "Python is cool", "JavaScript is amazing"];
 
-console.log(arr.join("\n"));
+let i = 0;
+do {
+    console.log(arr[i]);
+    i++;
+} while (i < arr.length);
