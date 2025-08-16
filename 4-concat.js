@@ -1,14 +1,14 @@
-function callMe(first, second) {
-  if (first === undefined) {
-    first = "undefined";
+function myFunction(arg1, arg2) {
+  if (arg1 !== undefined && arg2 !== undefined) {
+    console.log(arg1 + " " + arg2);
+  } else if (arg1 !== undefined && arg2 === undefined) {
+    console.log(arg1 + " is undefined");
+  } else {
+    console.log("undefined is undefined");
   }
-  if (second === undefined) {
-    second = "undefined";
-  }
-  console.log(`${first} is ${second}`);
 }
 
-// Examples:
-callMe("Python", "fun");   // Python is fun
-callMe("HBTN");            // HBTN is undefined
-callMe();                  // undefined is undefined
+
+myFunction("Python", "fun");   // Python fun
+myFunction("HBTN");            // HBTN is undefined
+myFunction();                  // undefined is undefined
